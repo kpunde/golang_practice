@@ -1,9 +1,6 @@
 package fileIO
 
 import (
-	"encoding/json"
-	"fmt"
-	"io/ioutil"
 	"testing"
 )
 
@@ -15,16 +12,5 @@ type _format struct {
 }
 
 func TestTestReadJson(t *testing.T) {
-	var formatStruct []_format
-
-	f, err := ioutil.ReadFile("./jsonLog.json")
-	if err != nil {
-		fmt.Println(err)
-	}
-
-	err = json.Unmarshal(f, &formatStruct)
-	if err != nil {
-		fmt.Println(err)
-	}
-	fmt.Println(formatStruct)
+	parseDir("/Users/kartikpunde/go/src/dsa", "")
 }
